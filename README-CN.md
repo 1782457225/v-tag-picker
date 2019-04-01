@@ -1,6 +1,6 @@
 # v-tag-picker
 
-一个酷酷移动端标签选择器 [ENG DOC](https://github.com/JakeLaoyu/v-tag-picker/blob/master/README.md)
+一个酷酷移动端标签选择器 [ENG DOC](https://github.com/1782457225/v-tag-picker/blob/master/README.md)
 
 [![npm](https://img.shields.io/npm/v/v-tag-picker.svg?style=flat-square)](https://www.npmjs.com/package/v-tag-picker)
 [![npm](https://img.shields.io/npm/dt/v-tag-picker.svg?style=flat-square)](https://www.npmjs.com/package/v-tag-picker)
@@ -17,7 +17,7 @@
 # Install
 
 ```sh
-npm i v-tag-picker -S
+npm i v-tag-picker1 -S
 ```
 
 # Usage
