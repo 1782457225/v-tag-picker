@@ -54,6 +54,7 @@ export default {
   position: relative;
   padding-top: 23px;
   box-sizing: border-box;
+  margin-top: 26px;
   img {
     width: 290px;
     height: 94px;

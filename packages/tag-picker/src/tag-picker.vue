@@ -7,7 +7,7 @@
     }"
   >
 
-    <div class="vtag-top" ref="top">
+    <div class="vtag-top" ref="top" :class="{'vtag-top__empty': totalSelection && totalSelection.length === 0}">
       <div
         ref="top-content"
         class="vtag-top__content"
