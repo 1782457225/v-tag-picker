@@ -34,45 +34,44 @@
       <div class="demo__code">
         <pre v-highlightjs>
           <code class="vue">
-&lt;template&gt;
-  &lt;v-tag-picker
-    :totalData="tagData"
-    :selectedData="selectedData"
-    :appendToBody="true"
-    @change="change"
-  &gt;
-    &lt;div class="img-wrap" slot="top"&gt;
-      &lt;img class="" src="~@/assets/tagbg.png" alt=""&gt;
-      &lt;div class="img-wrap__title"&gt;最感兴趣的栏目&lt;/div&gt;
-      &lt;div class="img-wrap__subtitle"&gt;定制专属于我的课程栏目&lt;/div&gt;
-    &lt;/div&gt;
+            <template>
+              <v-tag-picker
+                :totalData="tagData"
+                :selectedData="selectedData"
+                :appendToBody="true"
+                @change="change"
+              >
+                <div class="img-wrap" slot="top">
+                  <img class="" src="~@/assets/tagbg.png" alt="">
+                  <div class="img-wrap__title">最感兴趣的栏目</div>
+                  <div class="img-wrap__subtitle">定制专属于我的课程栏目</div>
+                </div>
 
-    &lt;div class="footer" slot="footer"&gt;
-      &lt;a href="#"&gt;进入首页&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/v-tag-picker&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-import { vTagPicker } from 'v-tag-picker'
-export default {
-  name: 'app',
-  components: {
-    vTagPicker
-  },
-  data () {
-    return {
-      tagData: Array.from(new Array(100), (val, index) => ({ name: `${index}` })),
-      selectedData: Array.from(new Array(2), (val, index) => ({ name: `${index}` }))
-    }
-  },
-  methods: {
-    change (val) {
-      console.log(val)
-    }
-  }
-}
-&lt;/script&gt;
+                <div class="footer" slot="footer">
+                  <a href="#">进入首页</a>
+                </div>
+              </v-tag-picker>
+            </template>
+            <script>
+            import { vTagPicker } from 'v-tag-picker'
+            export default {
+              name: 'app',
+              components: {
+                vTagPicker
+              },
+              data () {
+                return {
+                  tagData: Array.from(new Array(100), (val, index) => ({ name: `${index}` })),
+                  selectedData: Array.from(new Array(2), (val, index) => ({ name: `${index}` }))
+                }
+              },
+              methods: {
+                change (val) {
+                  console.log(val)
+                }
+              }
+            }
+            </script>
           </code>
         </pre>
       </div>

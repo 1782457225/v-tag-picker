@@ -24,12 +24,12 @@ npm i v-tag-picker1 -S
 
 ```js
 // 全局引用
-import vTagPicker from 'v-tag-picker'
+import vTagPicker from 'v-tag-picker1'
 
 Vue.use(vTagPicker)
 
 // 组件内引用
-import { vTagPicker } from 'v-tag-picker'
+import { vTagPicker } from 'v-tag-picker1'
 
 components: {
   vTagPicker

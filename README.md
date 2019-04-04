@@ -17,19 +17,19 @@ A cool mobile component of tag picker width vue.js [中文文档](https://github
 # Install
 
 ```sh
-npm i v-tag-picker -S
+npm i v-tag-picker1 -S
 ```
 
 # Usage
 
 ```js
 // global
-import vTagPicker from 'v-tag-picker'
+import vTagPicker from 'v-tag-picker1'
 
 Vue.use(vTagPicker)
 
 // component
-import { vTagPicker } from 'v-tag-picker'
+import { vTagPicker } from 'v-tag-picker1'
 
 components: {
   vTagPicker
