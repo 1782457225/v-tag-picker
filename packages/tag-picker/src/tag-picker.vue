@@ -250,7 +250,8 @@ export default {
         let newVtag = this.topVtagItemCache.cloneNode(true)
         newVtag.setAttribute('totalSelection-key', data[this.onlyKey])
         newVtag.innerHTML = data.name
-        $topContent.prepend(newVtag)
+        // $topContent.prepend(newVtag)  // 低版本不支持
+        $topContent.appendChild(newVtag)
       }
     },
     // 初始化标签位置，方便后续动画
@@ -292,9 +293,20 @@ export default {
       const $container = this.$refs.container
       const $vtagFooter = this.$refs['vtag-footer']
       $container.style.height = `${$vtagWrap.offsetHeight - $container.offsetTop - ($vtagFooter.offsetHeight || 0)}px`
+    },
+    addForEachToNodeList () { // 解决部分低版本浏览器NodeList不支持forEach函数的问题
+      if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = function (callback, thisArg) {
+          thisArg = thisArg || window
+          for (var i = 0; i < this.length; i++) {
+            callback.call(thisArg, this[i], i, this)
+          }
+        }
+      }
     }
   },
   mounted () {
+    this.addForEachToNodeList()
     this.appendToBody && document.body.appendChild(this.$refs['vtag-wrap'])
   },
   beforeDestroy () {}
