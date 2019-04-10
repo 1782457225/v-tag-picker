@@ -251,7 +251,7 @@ export default {
         newVtag.setAttribute('totalSelection-key', data[this.onlyKey])
         newVtag.innerHTML = data.name
         // $topContent.prepend(newVtag)  // 低版本不支持
-        $topContent.appendChild(newVtag)
+        if ($topContent.firstChild) $topContent.insertBefore(newVtag, $topContent.firstChild)
       }
     },
     // 初始化标签位置，方便后续动画

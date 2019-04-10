@@ -52,26 +52,6 @@
                 </div>
               </v-tag-picker>
             </template>
-            <script>
-            import { vTagPicker } from 'v-tag-picker'
-            export default {
-              name: 'app',
-              components: {
-                vTagPicker
-              },
-              data () {
-                return {
-                  tagData: Array.from(new Array(100), (val, index) => ({ name: `${index}` })),
-                  selectedData: Array.from(new Array(2), (val, index) => ({ name: `${index}` }))
-                }
-              },
-              methods: {
-                change (val) {
-                  console.log(val)
-                }
-              }
-            }
-            </script>
           </code>
         </pre>
       </div>

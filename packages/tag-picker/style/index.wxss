@@ -17,6 +17,11 @@
   right: 0;
   background: #fff;
 }
+.vtag-inner {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .vtag-top {
   height: 50px;
   box-sizing: border-box;
@@ -74,6 +79,10 @@
   font-size: 0;
   position: relative;
   box-sizing: border-box;
+  overflow: scroll;
+  margin: 0.18rem 0 0.31rem;
+  max-height: 6.4rem;
+  height: auto;
 }
 .vtag-container::before {
   content: '';
@@ -100,13 +109,14 @@
   min-width: 100px;
   overflow: auto;
   height: 100%;
-  padding: 30px 25px;
+  max-height: 6.4rem;
+  padding: .5rem;
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
 }
 .vtag-container__item {
   display: inline-block;
-  margin: 0 15px 15px 0;
+  margin: 0 .32rem .32rem 0;
   position: relative;
 }
 .vtag-container__item.hide {
